@@ -1,0 +1,26 @@
+algoritmo "Trocar_valor"
+var
+A, B, C: real
+inicio
+    escreva("Digite o valor de A e pressione ENTER: ")
+    leia(A)
+    escreva("Digite o valor de B e pressione ENTER: ")
+    leia(B)
+    C <- A
+    A <- B
+    B <- C
+    escreval("A",A)
+    escreva("B",B)
+fimalgoritmo
+
+algoritmo "Real_Para_Dolar"
+var
+real, dolar, qd : real
+inicio
+escreva ("Escreva o valor em reais e pressione ENTER: ")
+leia (real)
+escreva Escreva a cotação do dolar e pressione ENTER: ")
+leia (qd)
+dolar <- real/qd
+escreva ("A conversão do Dolar para Real é: "R$", dolar)
+fimalgoritmo

@@ -1,0 +1,4 @@
+NovaIguaçu 45000
+Queimados 90000
+BelfordRoxo 10000
+Mage 5000

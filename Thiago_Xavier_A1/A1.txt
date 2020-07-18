@@ -1,0 +1,82 @@
+QUESTÃO 6
+
+#include <stdio.h>
+double media (double n1, double n2, double n3){
+double menor, media=0;
+    if(n1<=n2 && n1<=n3){
+        menor=n1;
+        }
+    else{
+		if (n2<=n3){
+        menor=n2;
+    }
+    	else{
+        menor=n3;
+		}
+    }
+	
+	media=(n1+n2+n3-menor)/2.0;
+    return media;
+}
+int main(int argc, char *argv[]){
+printf ("\n%f", media (5,6,7));
+printf ("\n%f", media (6,5,7));
+printf ("\n%f", media (7,6,5));
+return 0;
+}
+_____________________________
+
+QUESTÃO 7
+
+#include <stdio.h>
+
+int main () {
+	int v1[50];
+	int v2[50];
+	int mat[2][2];
+	int pares_v1=0, impares_v1=0;
+	int pares_v2=0, impares_v2=0;
+	for (int i=0; i<3; i++){
+		printf("Valor da posição [%d] do vetor 1: ", i+1);
+		scanf ("%d", &v1[i]);
+		printf ("Valor da posição [%d] do vetor 2: ", i+1);
+		scanf ("%d", &v2[i]);
+		if (v1[i]%2==0) pares_v1++;
+		else impares_v1++;
+		if (v2[i]%2==0) pares_v2++;
+		else impares_v2++;
+	}
+	mat[0][0]=pares_v1;
+	mat[0][1]=impares_v1;
+	mat[1][0]=pares_v2;
+	mat[1][1]=impares_v2;
+	for (int i=0; i<2; i++){
+		printf("\n");
+		for (int j=0; j<2; j++){
+			printf ("\t%d", mat[i][j]);
+		}
+	}
+}
+_____________________________
+
+QUESTÃO 8
+
+#include <stdio.h>
+#include <math.h>
+
+double volumeCilindro(double raio, double altura){
+	return (M_PI*pow(raio,2)*altura);
+}
+double areaCirculo(double raio){
+	return (M_PI*pow(raio, 2));
+}
+int main () {
+	double raio, altura;
+	printf ("\nDigite o raio: ");
+	scanf ("%lf", &raio);
+	printf ("\nDigite a altura: ");
+	scanf ("%lf", &altura);
+	printf ("\nA área é:%.2lf", areaCirculo (raio));
+	printf ("\nO volume é:%.2lf", volumeCilindro (raio, altura));
+	return 0;
+}
